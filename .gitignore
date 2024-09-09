@@ -22,3 +22,15 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+/SoftProgRRHHModel/build/
+/SoftProgRRHHModel/dist/
+/SoftProgRRHHModel/nbproject/private
+/SoftProgGestClientesModel/build/
+/SoftProgGestClientesModel/dist/
+/SoftProgGestClientesModel/nbproject/private
+/SoftProgLogisticaModelbuild/
+/SoftProgLogisticaModelbuild/dist/
+/SoftProgLogisticaModelbuild/nbproject/private
+/SoftProg/build/
+/SoftProg/dist/
+/SoftProg/nbproject/private

@@ -23,6 +23,4 @@ public class Prueba {
         this.nombre = nombre;
     }
     
-    
-    
 }
