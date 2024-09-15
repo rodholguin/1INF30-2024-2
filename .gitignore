@@ -34,3 +34,9 @@ replay_pid*
 /SoftProg/build/
 /SoftProg/dist/
 /SoftProg/nbproject/private
+/SoftProgDBManager/nbproject/private/
+/SoftProgRRHHDA/nbproject/private/
+/SoftProgRRHHDA/dist/
+/SoftProgRRHHDA/build/
+/SoftProgDBManager/dist/
+/SoftProgDBManager/build/
