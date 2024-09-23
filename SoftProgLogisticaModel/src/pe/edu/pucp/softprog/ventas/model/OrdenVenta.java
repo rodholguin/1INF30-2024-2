@@ -1,10 +1,12 @@
 package pe.edu.pucp.softprog.ventas.model;
+import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.softprog.gestclientes.model.Cliente;
 import pe.edu.pucp.softprog.rrhh.model.Empleado;
 
 public class OrdenVenta {
     private int idOrdenVenta;
+    private ArrayList<LineaOrdenVenta> lineasOrdenVenta;
     private double total;
     private Date fechaHora;
     private boolean activo;
@@ -57,6 +59,14 @@ public class OrdenVenta {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public ArrayList<LineaOrdenVenta> getLineasOrdenVenta() {
+        return lineasOrdenVenta;
+    }
+
+    public void setLineasOrdenVenta(ArrayList<LineaOrdenVenta> lineasOrdenVenta) {
+        this.lineasOrdenVenta = lineasOrdenVenta;
     }
     
 }

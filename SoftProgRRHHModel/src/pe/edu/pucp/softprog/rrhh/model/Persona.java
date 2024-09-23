@@ -9,6 +9,16 @@ public class Persona {
     private char genero;
     private Date fechaNacimiento;
     
+    public Persona(){};
+
+    public Persona(String DNI, String nombre, String apellidoPaterno, char genero, Date fechaNacimiento) {
+        this.DNI = DNI;
+        this.nombre = nombre;
+        this.apellidoPaterno = apellidoPaterno;
+        this.genero = genero;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+    
     public int getIdPersona() {
         return idPersona;
     }

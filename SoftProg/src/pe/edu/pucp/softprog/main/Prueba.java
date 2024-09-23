@@ -2,6 +2,10 @@ package pe.edu.pucp.softprog.main;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import pe.edu.pucp.softprog.gestclientes.dao.ClienteDAO;
+import pe.edu.pucp.softprog.gestclientes.model.Categoria;
+import pe.edu.pucp.softprog.gestclientes.model.Cliente;
+import pe.edu.pucp.softprog.gestclientes.mysql.ClienteMySQL;
 import pe.edu.pucp.softprog.rrhh.dao.AreaDAO;
 import pe.edu.pucp.softprog.rrhh.dao.EmpleadoDAO;
 import pe.edu.pucp.softprog.rrhh.model.Area;
@@ -22,22 +26,37 @@ public class Prueba {
 //        else  
 //            System.out.println("Ha ocurrido un error en la "
 //                    + "eliminación del area");
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-        Empleado emp = new Empleado();
-        emp.setDNI("17625444");
-        emp.setNombre("RENZO");
-        emp.setApellidoPaterno("GAMARRA");
-        emp.setGenero('M');
-        emp.setFechaNacimiento(sdf.parse("01-03-1983"));
-        emp.setCargo("TI");
-        emp.setSueldo(1500.00);
-        
-        EmpleadoDAO daoEmpleado = new EmpleadoMySQL();
-        daoEmpleado.insertar(emp);
-        
-        ArrayList<Empleado> empleados = daoEmpleado.listarTodos();
-        for(Empleado empt : empleados){
-            System.out.println(empt.getNombre());
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+//        Empleado emp = new Empleado();
+//        emp.setDNI("17625444");
+//        emp.setNombre("RENZO");
+//        emp.setApellidoPaterno("GAMARRA");
+//        emp.setGenero('M');
+//        emp.setFechaNacimiento(sdf.parse("01-03-1983"));
+//        emp.setCargo("TI");
+//        emp.setSueldo(1500.00);
+//        
+//        EmpleadoDAO daoEmpleado = new EmpleadoMySQL();
+//        daoEmpleado.insertar(emp);
+//        
+//        ArrayList<Empleado> empleados = daoEmpleado.listarTodos();
+//        for(Empleado empt : empleados){
+//            System.out.println(empt.getNombre());
+//        }
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+//        Cliente cliente = new Cliente("98179815", "MARIO",
+//                "LOPEZ", 'M',
+//                sdf.parse("15-04-1990"), 1200.00, 
+//                Categoria.Platinum);
+        ClienteDAO clienteDAO = new ClienteMySQL();
+//        int resultado = clienteDAO.insertar(cliente);
+//        if(resultado!=0)
+//            System.out.println("Se ha realizado correctamente el registro del cliente");
+
+        ArrayList<Cliente> clientes = clienteDAO.listarTodos();
+        for(Cliente c: clientes){
+            System.out.println(c.getDNI() + " - " + c.getNombre() + " " + 
+                    c.getApellidoPaterno());
         }
     }
 }
