@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.softprog.almacen.dao;
+import java.util.ArrayList;
+import pe.edu.pucp.softprog.almacen.model.Producto;
 
-/**
- *
- * @author RODRIGO
- */
-public class ProductoDAO {
-    
+public interface ProductoDAO {
+    int insertar(Producto producto);
+    int modificar(Producto producto);
+    int eliminar(int idProducto);
+    ArrayList<Producto> listarTodos();
+    Producto obtenerPorId(int idProducto);
 }

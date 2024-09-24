@@ -69,4 +69,11 @@ public class OrdenVenta {
         this.lineasOrdenVenta = lineasOrdenVenta;
     }
     
+    public void calcularTotal(){
+        this.total = 0;
+        for(LineaOrdenVenta lov: lineasOrdenVenta){
+            this.total += lov.getSubtotal();
+        }
+    }
+    
 }

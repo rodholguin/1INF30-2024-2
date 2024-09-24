@@ -81,5 +81,10 @@ public class EmpleadoMySQL implements EmpleadoDAO {
         }
         return empleados;
     }
+
+    @Override
+    public Empleado obtenerPorId(int n) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
